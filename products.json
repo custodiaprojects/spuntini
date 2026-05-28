@@ -538,6 +538,14 @@
       "stock": true
     },
     {
+      "id": "P60",
+      "name": "Chicken Schnitzels Sovereign Premium Frozen 1kg",
+      "cat": "meals",
+      "price": 100,
+      "img": "https://raw.githubusercontent.com/custodiaprojects/spuntini-images/main/P60.jpg",
+      "stock": true
+    },
+    {
       "id": "B01",
       "name": "Italian Pasta Night Bundle",
       "cat": "bundles",
