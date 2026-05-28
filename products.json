@@ -423,7 +423,7 @@
       "cat": "bakery",
       "price": 285,
       "img": "https://raw.githubusercontent.com/custodiaprojects/spuntini-images/main/P40.jpg",
-      "stock": true
+      "stock": false
     },
     {
       "id": "P41",
