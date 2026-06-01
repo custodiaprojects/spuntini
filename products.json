@@ -335,7 +335,7 @@
       "cat": "oils",
       "price": 220,
       "img": "https://raw.githubusercontent.com/custodiaprojects/spuntini-images/main/P30.jpg",
-      "stock": true
+      "stock": false
     },
     {
       "id": "P31",
