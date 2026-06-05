@@ -560,7 +560,7 @@
       "code": "SPUNTINI10",
       "type": "percentage",
       "value": 10,
-      "active": true,
+      "active": false,
       "description": "10% off your entire order"
     }
   ]
