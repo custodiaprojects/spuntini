@@ -546,6 +546,14 @@
       "stock": true
     },
     {
+      "id": "P61",
+      "name": "Garofalo Tagliatelle Nido 500g",
+      "cat": "pasta",
+      "price": 45,
+      "img": "https://raw.githubusercontent.com/custodiaprojects/spuntini-images/main/P61.jpg",
+      "stock": true
+    },
+    {
       "id": "B01",
       "name": "Italian Pasta Night Bundle",
       "cat": "bundles",
