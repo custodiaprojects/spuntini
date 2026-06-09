@@ -381,7 +381,7 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.55);padding:36px 28px
     </div>
   </div>
   <div class="footer-bot">
-    <span>© 2025 Spuntini Longmeadow. All rights reserved.</span>
+    <span>© 2025 Spuntini. All rights reserved.</span>
     <span>Products last updated: <span id="lastSync">loading…</span></span>
   </div>
 </footer>
@@ -520,7 +520,7 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.55);padding:36px 28px
         <div class="f-section">
           <h3>Coupon Code</h3>
           <div class="coupon-wrap">
-            <input class="coupon-input" id="couponInput" placeholder="Enter coupon for discount :) " maxlength="30">
+            <input class="coupon-input" id="couponInput" placeholder="Enter code e.g. SPUNTINI10" maxlength="30">
             <button class="coupon-btn" onclick="applyCoupon()">Apply</button>
           </div>
           <div class="coupon-msg" id="couponMsg"></div>
@@ -564,7 +564,7 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.55);padding:36px 28px
         <span>Branch Code: <b>198765</b></span>
         <span>Reference: <b id="successRef2">SPT-00000</b></span>
       </div>
-      <p style="font-size:12px;">We'll confirm your delivery slot by email once payment is received.</p>
+      <p style="font-size:12px;">We'll notify you as soon as your order is ready. Please send proof of payment to spuntinilongmeadow@gmail.com.</p>
       <button class="done-btn" onclick="finishOrder()">Continue Shopping</button>
     </div>
 
@@ -996,23 +996,23 @@ Notes: ${notes||'None'}
 Items:
 ${itemsText}
 
-Subtotal: R${fmtPrice(sub)}
-Delivery: ${fee===0?'FREE':'R'+fee}
+Subtotal: R${fmtPrice(sub)}${discount>0?'\nDiscount ('+appliedCoupon.code+'): -R'+fmtPrice(discount):''}
+${isDelivery?'Delivery: '+(fee===0?'FREE':'R'+fmtPrice(fee)):'Collection — FREE'}
 TOTAL: R${fmtPrice(tot)}
 
 Payment: EFT — awaiting R${fmtPrice(tot)} with ref ${ref}`;
 
   const custMsg=`Ciao ${fName},
 
-Thank you for your order from Spuntini Longmeadow!
+Thank you for your order from Spuntini!
 
 Your order reference is: ${ref}
 
 Items ordered:
 ${itemsText}
 
-Subtotal: R${fmtPrice(sub)}
-Delivery: ${fee===0?'FREE':'R'+fee}
+Subtotal: R${fmtPrice(sub)}${discount>0?'\nDiscount ('+appliedCoupon.code+'): -R'+fmtPrice(discount):''}
+${isDelivery?'Delivery: '+(fee===0?'FREE':'R'+fmtPrice(fee)):'Collection — FREE'}
 TOTAL TO PAY: R${fmtPrice(tot)}
 
 Fulfilment: ${fulfilmentLabel}${isDelivery?' — '+street+', '+suburb+', '+cityLabel:''}
@@ -1032,9 +1032,9 @@ Reference: ${ref}
 
 Please use reference ${ref} exactly — this is how we match your payment to your order.
 
-We'll confirm your delivery slot once payment is received.
+Thank you for your order! We'll notify you as soon as it's ready for collection or delivery. Please email your proof of payment to spuntinilongmeadow@gmail.com, or wait for your EFT payment to reflect. Orders are released once payment has been confirmed. We use EFT payments to avoid card processing fees and keep our prices lower for our customers.
 
-A presto!
+Buon appetito!
 The Spuntini Team
 spuntinilongmeadow@gmail.com`;
 
